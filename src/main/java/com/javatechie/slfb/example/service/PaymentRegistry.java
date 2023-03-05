@@ -1,7 +1,7 @@
 package com.javatechie.slfb.example.service;
 
-public interface PaymentRegistry {
-	
-	public PaymentService getServiceBean(String serviceName);
+import com.javatechie.slfb.example.dto.PaymentSystemType;
 
+public interface PaymentRegistry {
+	PaymentService getPaymentService(PaymentSystemType serviceName);
 }
