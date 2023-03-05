@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.javatechie.slfb.example.dto.PaymentRequest;
 
-@Service("AmazonPay")
+@Service(PaymentSystemTypeConst.AMAZONPAY_TYPE)
 public class AmazonPay implements PaymentService {
 
 	@Override

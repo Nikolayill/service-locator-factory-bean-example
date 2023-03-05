@@ -1,5 +1,8 @@
 package com.javatechie.slfb.example.controller;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,27 +17,9 @@ import com.javatechie.slfb.example.service.PhonePe;
 
 @RestController
 @RequestMapping("/payment-service")
+@RequiredArgsConstructor
 public class PaymentController {
-
-	@Autowired
-	PaymentRegistry registry;
-
-	/*
-	 * @Autowired private Paytm paytm;
-	 * 
-	 * @Autowired private PhonePe phonePe;
-	 * 
-	 * @Autowired private AmazonPay ap;
-	 */
-
-	/*
-	 * @PostMapping("/pay") public String payNow(@RequestBody PaymentRequest
-	 * request) { String response = ""; if
-	 * (request.getPaymentMethod().equals("Paytm")) { response = paytm.pay(request);
-	 * } if (request.getPaymentMethod().equals("PhonePe")) { response =
-	 * phonePe.pay(request); } if (request.getPaymentMethod().equals("AmazonPay")) {
-	 * response = ap.pay(request); } return response; }
-	 */
+	private final PaymentRegistry registry;
 
 	@PostMapping("/pay")
 	public String paymentProcess(@RequestBody PaymentRequest request) {

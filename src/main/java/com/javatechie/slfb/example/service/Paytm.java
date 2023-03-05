@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.javatechie.slfb.example.dto.PaymentRequest;
 
-@Service("Paytm")
+@Service(PaymentSystemTypeConst.PAYTM_TYPE)
 public class Paytm implements PaymentService {
 
 	@Override
