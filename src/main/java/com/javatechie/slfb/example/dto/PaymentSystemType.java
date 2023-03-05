@@ -1,6 +1,6 @@
-package com.javatechie.slfb.example.service;
+package com.javatechie.slfb.example.dto;
 
-import static com.javatechie.slfb.example.service.PaymentSystemTypeConst.*;
+import static com.javatechie.slfb.example.dto.PaymentSystemTypeConst.*;
 
 public enum PaymentSystemType {
     AMAZONPAY(AMAZONPAY_TYPE),

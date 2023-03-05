@@ -1,4 +1,4 @@
-package com.javatechie.slfb.example.service;
+package com.javatechie.slfb.example.dto;
 
 public interface PaymentSystemTypeConst {
     String AMAZONPAY_TYPE="AmazonPay";
