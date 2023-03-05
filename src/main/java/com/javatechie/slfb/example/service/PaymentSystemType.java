@@ -5,6 +5,7 @@ import static com.javatechie.slfb.example.service.PaymentSystemTypeConst.*;
 public enum PaymentSystemType {
     AMAZONPAY(AMAZONPAY_TYPE),
     PAYTM(PAYTM_TYPE),
+    PAYXXX(PAYXXX_TYPE),
     PHONEPE(PHONEPE_TYPE);
 
     private final String typeName;

@@ -10,11 +10,11 @@ import com.javatechie.slfb.example.service.PaymentRegistry;
 @Configuration
 public class ServiceLocatorConfig {
 
-	@Bean
-	public FactoryBean<?> getBean() {
-		ServiceLocatorFactoryBean bean = new ServiceLocatorFactoryBean();
-		bean.setServiceLocatorInterface(PaymentRegistry.class);
-		return bean;
+	@Bean("PaymentRegistry")
+	public FactoryBean<?> getPaymentRegistry() {
+		ServiceLocatorFactoryBean serviceLocatorFactoryBean = new ServiceLocatorFactoryBean();
+		serviceLocatorFactoryBean.setServiceLocatorInterface(PaymentRegistry.class);
+		return serviceLocatorFactoryBean;
 	}
 
 }

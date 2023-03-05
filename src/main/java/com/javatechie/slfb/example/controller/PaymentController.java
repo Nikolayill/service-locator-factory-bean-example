@@ -13,12 +13,12 @@ import com.javatechie.slfb.example.service.PaymentRegistry;
 @RequestMapping("/payment-service")
 @RequiredArgsConstructor
 public class PaymentController {
-	private final PaymentRegistry registry;
+	private final PaymentRegistry paymentRegistry;
 
 	@PostMapping("/pay")
 	public String paymentProcess(@RequestBody PaymentRequest request) {
 		String response = "";
-		response = registry.getPaymentService(request.getPaymentMethod())
+		response = paymentRegistry.getPaymentService(request.getPaymentMethod())
 				.pay(request);
 		return response;
 	}
